@@ -21,7 +21,7 @@
     </div>
   </header>
 
-  <section id="about" class="section">
+  <section id="about" class="section about reveal">
     <div class="container">
       <h2>About Me</h2>
       <p>
@@ -32,7 +32,7 @@
     </div>
   </section>
 
-  <section id="projects" class="section alt">
+  <section id="projects" class="section projects reveal">
     <div class="container">
       <h2>Projects</h2>
       <div class="grid">
@@ -56,7 +56,7 @@
     </div>
   </section>
 
-  <section id="skills" class="section">
+  <section id="skills" class="section skills reveal">
     <div class="container">
       <h2>Skills</h2>
       <ul class="skills-list">
@@ -68,7 +68,7 @@
     </div>
   </section>
 
-  <section id="experience" class="section alt">
+  <section id="experience" class="section experience reveal">
     <div class="container">
       <h2>Experience</h2>
       <div class="timeline">
@@ -94,7 +94,7 @@
     </div>
   </section>
 
-  <section id="contact" class="section">
+  <section id="contact" class="section contact reveal">
     <div class="container">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:divya.patel4518@gmail.com">divya.patel4518@gmail.com</a></p>
@@ -115,7 +115,19 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Scroll reveal effect
+    const reveals = document.querySelectorAll(".reveal");
+    window.addEventListener("scroll", () => {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        }
+      }
+    });
   </script>
 </body>
 </html>
-
