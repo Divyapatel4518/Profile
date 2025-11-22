@@ -3,202 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Divya Patel — Business Analyst & Data Enthusiast</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <title>Divya Patel | Business Analyst & Data Enthusiast</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-grid">
-      <div class="brand">
-        <h1 class="site-title">Divya Patel</h1>
-        <p class="site-subtitle">Business Analysis • Data • AI</p>
-      </div>
-      <nav class="top-nav">
+  <header class="header">
+    <div class="container">
+      <div class="logo">Divya Patel</div>
+      <nav class="nav">
+        <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#contact" class="btn btn-primary">Contact</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <section class="hero">
-    <div class="container hero-content">
-      <div class="hero-text">
-        <h2>Turning complex problems into clear, data‑driven decisions</h2>
-        <p>
-          Master of Information Technology (Business Analysis) from QUT. I build practical solutions across
-          business analysis, data visualization, and AI (LLMs/RAG) — with strong stakeholder communication and agile delivery.
-        </p>
-        <div class="cta-group">
-          <a class="btn btn-primary" href="#projects">View Projects</a>
-          <a class="btn btn-secondary" href="#contact">Get in touch</a>
+    <div class="container">
+      <h1>Hi, I'm Divya 👋</h1>
+      <p>Business Analyst & Data Enthusiast passionate about solving problems with technology, insights, and empathy.</p>
+      <a href="#projects" class="btn">Explore My Work</a>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Master of IT from QUT, specializing in Business Analysis. I build tools and dashboards that help organizations make smarter decisions.</p>
+    </div>
+  </section>
+
+  <section id="projects" class="section alt">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>LLM Tool for Strategic Foresight</h3>
+          <p>Built a RAG-based AI tool for Queensland Government to extract PESTEL insights from documents.</p>
         </div>
-        <div class="meta">
-          <span>Brisbane, QLD</span> •
-          <a href="mailto:divya.patel4518@gmail.com">divya.patel4518@gmail.com</a> •
-          <a href="tel:+61431831976">+61 431 831 976</a>
+        <div class="card">
+          <h3>Blockchain in Education</h3>
+          <p>Explored secure credential management using blockchain, identifying adoption strategies and barriers.</p>
+        </div>
+        <div class="card">
+          <h3>Hospital Performance Dashboard</h3>
+          <p>Created a Power BI dashboard analyzing KPIs like wait times, readmission, and satisfaction.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="projects" class="section">
+  <section id="skills" class="section">
     <div class="container">
-      <h3>Selected projects</h3>
-      <div class="cards">
-        <article class="card">
-          <h4>LLM tool for strategic foresight (PESTEL RAG)</h4>
-          <p>
-            Built a Retrieval Augmented Generation tool on Relevance AI to extract driving forces from complex documents
-            within the PESTEL framework for Queensland Government.
-          </p>
-          <ul class="tags">
-            <li>LLM</li><li>RAG</li><li>PESTEL</li><li>Agile</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h4>Blockchain in education</h4>
-          <p>
-            Researched credential verification using blockchain; recommended strategies to address cost, skills, and institutional adoption.
-          </p>
-          <ul class="tags">
-            <li>Blockchain</li><li>Research</li><li>Data Governance</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h4>Australian hospital performance dashboard</h4>
-          <p>
-            Interactive Power BI dashboard analyzing wait times, readmission, mortality, satisfaction, and financial performance (2021–2025).
-          </p>
-          <ul class="tags">
-            <li>Power BI</li><li>KPIs</li><li>Healthcare</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h4>Housing market & affordability dataset</h4>
-          <p>
-            Integrated ABS, RBA, and real‑estate data; created a clean Excel dataset for Power BI prototyping and trend projections (2026–2040).
-          </p>
-          <ul class="tags">
-            <li>Data Integration</li><li>Excel</li><li>Forecasting</li>
-          </ul>
-        </article>
-      </div>
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>Business Analysis (BPMN, UML, Agile)</li>
+        <li>Data Visualization (Power BI, Tableau, Excel)</li>
+        <li>Programming (PHP, Java, Python, HTML/CSS)</li>
+        <li>Tools (Jira, Zendesk, Relevance AI)</li>
+      </ul>
     </div>
   </section>
 
-  <section id="skills" class="section alt">
+  <section id="contact" class="section alt">
     <div class="container">
-      <h3>Skills</h3>
-      <div class="skills-grid">
-        <div>
-          <h5>Business analysis</h5>
-          <ul>
-            <li>Requirements elicitation (User stories, Use cases)</li>
-            <li>Process modeling (BPMN, UML)</li>
-            <li>Agile (Scrum)</li>
-            <li>Stakeholder communication</li>
-          </ul>
-        </div>
-        <div>
-          <h5>Data & visualization</h5>
-          <ul>
-            <li>SQL, Excel, Power BI, Tableau</li>
-            <li>KPI design & dashboards</li>
-          </ul>
-        </div>
-        <div>
-          <h5>Development</h5>
-          <ul>
-            <li>HTML/CSS, JavaScript, PHP, Java, Python, C/C++</li>
-            <li>WordPress, XAMPP, Apache Tomcat</li>
-          </ul>
-        </div>
-        <div>
-          <h5>Tools</h5>
-          <ul>
-            <li>Jira, Zendesk, Relevance AI, MS Project, MS Office</li>
-          </ul>
-        </div>
-      </div>
+      <h2>Contact</h2>
+      <p>Let's connect! I'm open to opportunities and collaborations.</p>
+      <a href="mailto:divya.patel4518@gmail.com" class="btn">Email Me</a>
     </div>
   </section>
 
-  <section id="experience" class="section">
+  <footer class="footer">
     <div class="container">
-      <h3>Experience</h3>
-      <div class="timeline">
-        <div class="timeline-item">
-          <h4>Customer Service Supervisor — Coles Greenslopes</h4>
-          <span class="time">Mar 2023 — Present</span>
-          <ul>
-            <li>Resolved customer issues and supported self‑checkout and cash operations.</li>
-            <li>Trained new team members; improved workflows during night shifts.</li>
-            <li>Built strong communication and problem‑solving under pressure.</li>
-          </ul>
-        </div>
-        <div class="timeline-item">
-          <h4>PHP Developer — Icon Technology (Rajkot)</h4>
-          <span class="time">Jul 2017 — Dec 2018</span>
-          <ul>
-            <li>Built responsive e‑commerce sites; tailored themes and plugins.</li>
-            <li>Collaborated across front‑end and back‑end to meet client requirements.</li>
-          </ul>
-        </div>
+      <p>© <span id="year"></span> Divya Patel • Brisbane, QLD</p>
+      <div class="social">
+        <a href="https://github.com/" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
       </div>
-    </div>
-  </section>
-
-  <section id="education" class="section alt">
-    <div class="container">
-      <h3>Education & certificates</h3>
-      <div class="edu-grid">
-        <div>
-          <h4>Master of Information Technology, QUT (2023–2024)</h4>
-          <p>Major: Business Analysis • Key subjects: BPMN, DB Management, PM, Systems Analysis.</p>
-        </div>
-        <div>
-          <h4>Bachelor of Computer Engineering</h4>
-          <p>Core: Programming (C, C++, Java, PHP, .NET, SQL), IT projects.</p>
-        </div>
-      </div>
-      <div class="certs">
-        <span class="pill">Business Analysis Foundations</span>
-        <span class="pill">Power BI for Beginner</span>
-        <span class="pill">Microsoft Azure Fundamentals</span>
-        <span class="pill">Deloitte (Data, Tech, Cyber) — Forage</span>
-        <span class="pill">NSW Digital — Forage</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section">
-    <div class="container">
-      <h3>Contact</h3>
-      <p>If you’d like to collaborate or discuss opportunities, reach out anytime.</p>
-      <div class="contact-links">
-        <a class="btn btn-primary" href="mailto:divya.patel4518@gmail.com">Email</a>
-        <a class="btn btn-secondary" href="tel:+61431831976">Call</a>
-        <a class="btn" href="https://www.linkedin.com/">LinkedIn</a>
-        <a class="btn" href="https://github.com/">GitHub</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="y"></span> Divya Patel • Brisbane, QLD • Built with GitHub Pages</p>
     </div>
   </footer>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
