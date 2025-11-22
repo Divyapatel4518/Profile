@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Divya Patel | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="header">
@@ -16,47 +16,39 @@
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
+        <a href="#certificates">Certificates</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <section id="about" class="section about reveal">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        Master of Information Technology graduate from QUT, specializing in Business Analysis. 
-        I build tools and dashboards that help organizations make smarter decisions. 
-        My experience spans AI tools for government, blockchain research, and interactive Power BI dashboards.
-      </p>
-    </div>
-  </section>
-
-  <section id="projects" class="section projects reveal">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>LLM Tool for Strategic Foresight</h3>
-          <p>Developed a Retrieval Augmented Generation tool to extract PESTEL insights for Queensland Government.</p>
-        </div>
-        <div class="card">
-          <h3>Blockchain in Education</h3>
-          <p>Researched secure credential management using blockchain, identifying adoption strategies and barriers.</p>
-        </div>
-        <div class="card">
-          <h3>Hospital Performance Dashboard</h3>
-          <p>Created a Power BI dashboard analyzing KPIs like wait times, readmission, and satisfaction.</p>
-        </div>
-        <div class="card">
-          <h3>Housing Market Dataset</h3>
-          <p>Integrated ABS, RBA, and real estate data to support affordability analysis and trend forecasting.</p>
-        </div>
+  <section id="about" class="section reveal about">
+    <div class="container about-flex">
+      <img src="your-photo.jpg" alt="Divya Patel" class="profile-photo">
+      <div>
+        <h2>About Me</h2>
+        <p>
+          Master of Information Technology graduate from QUT, specializing in Business Analysis. 
+          I build tools and dashboards that help organizations make smarter decisions. 
+          My experience spans AI tools for government, blockchain research, and interactive Power BI dashboards.
+        </p>
       </div>
     </div>
   </section>
 
-  <section id="skills" class="section skills reveal">
+  <section id="projects" class="section reveal projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card"><h3>LLM Tool for Strategic Foresight</h3><p>Built a RAG tool to extract PESTEL insights for Queensland Government.</p></div>
+        <div class="card"><h3>Blockchain in Education</h3><p>Researched credential verification using blockchain, identifying adoption strategies and barriers.</p></div>
+        <div class="card"><h3>Hospital Performance Dashboard</h3><p>Created a Power BI dashboard analyzing KPIs like wait times, readmission, and satisfaction.</p></div>
+        <div class="card"><h3>Housing Market Dataset</h3><p>Integrated ABS, RBA, and real estate data to support affordability analysis and forecasting.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section reveal skills">
     <div class="container">
       <h2>Skills</h2>
       <ul class="skills-list">
@@ -68,7 +60,7 @@
     </div>
   </section>
 
-  <section id="experience" class="section experience reveal">
+  <section id="experience" class="section reveal experience">
     <div class="container">
       <h2>Experience</h2>
       <div class="timeline">
@@ -94,18 +86,35 @@
     </div>
   </section>
 
-  <section id="contact" class="section contact reveal">
+  <section id="certificates" class="section reveal certificates">
     <div class="container">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:divya.patel4518@gmail.com">divya.patel4518@gmail.com</a></p>
-      <p>Phone: <a href="tel:+61431831976">+61 431 831 976</a></p>
-      <p>Location: Brisbane, QLD, Australia</p>
-      <p>
-        <a href="https://github.com/" target="_blank">GitHub</a> |
-        <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
-      </p>
+      <h2>Certificates</h2>
+      <div class="cert-grid">
+        <div class="cert-card">Business Analysis Foundations</div>
+        <div class="cert-card">Power BI for Beginners</div>
+        <div class="cert-card">Microsoft Azure Fundamentals</div>
+        <div class="cert-card">Deloitte Data & Tech Virtual Experience</div>
+        <div class="cert-card">NSW Digital Virtual Experience</div>
+      </div>
     </div>
   </section>
+
+  <section id="contact" class="section reveal contact">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:divya.patel4518@gmail.com">divya.patel4518@gmail.com</a></p>
+    <p>Phone: <a href="tel:+61431831976">+61 431 831 976</a></p>
+    <p>Location: Brisbane, QLD, Australia</p>
+    <p>
+      <a href="https://github.com/" target="_blank">GitHub</a> | 
+      <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+    </p>
+    <p>
+      📄 <a href="resume.pdf" target="_blank" class="btn">Download My Resume</a>
+    </p>
+  </div>
+</section>
+
 
   <footer class="footer">
     <div class="container">
@@ -115,8 +124,6 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Scroll reveal effect
     const reveals = document.querySelectorAll(".reveal");
     window.addEventListener("scroll", () => {
       for (let i = 0; i < reveals.length; i++) {
