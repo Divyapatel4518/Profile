@@ -1,16 +1,16 @@
 :root {
-  --bg: #ffffff;
   --text: #1f2937;
-  --accent: #2563eb;
-  --alt: #f9fafb;
+  --accent: #6366f1;
+  --bg-light: #f9fafb;
+  --bg-gradient: linear-gradient(90deg, #6366f1, #22d3ee);
   --card: #ffffff;
-  --shadow: rgba(0, 0, 0, 0.08);
+  --shadow: rgba(0, 0, 0, 0.1);
 }
 
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: var(--bg);
+  background: var(--bg-light);
   color: var(--text);
   line-height: 1.6;
 }
@@ -22,12 +22,18 @@ body {
 }
 
 .header {
-  background: var(--accent);
+  background: var(--bg-gradient);
   color: white;
   padding: 16px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
+  animation: slideDown 0.8s ease;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
 }
 
 .header-flex {
@@ -50,20 +56,36 @@ body {
   color: white;
   text-decoration: none;
   font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #fef9c3;
 }
 
 .section {
   padding: 60px 20px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
 }
 
-.section.alt {
-  background: var(--alt);
+.section.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-h2 {
+.section h2 {
   font-size: 28px;
   margin-bottom: 20px;
+  color: var(--accent);
 }
+
+.about { background: #ffffff; }
+.projects { background: #eef2ff; }
+.skills { background: #fef9c3; }
+.experience { background: #ecfdf5; }
+.contact { background: #fff7ed; }
 
 .grid {
   display: grid;
@@ -76,11 +98,12 @@ h2 {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px var(--shadow);
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 8px 20px var(--shadow);
 }
 
 .skills-list {
@@ -91,43 +114,14 @@ h2 {
 
 .skills-list li {
   margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.skills-list li:hover {
+  transform: translateX(6px);
+  color: var(--accent);
 }
 
 .timeline {
   display: grid;
   gap: 24px;
-}
-
-.timeline-item {
-  background: var(--card);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px var(--shadow);
-}
-
-.timeline-item h3 {
-  margin: 0 0 8px;
-  font-size: 18px;
-  color: var(--text);
-}
-
-.timeline-item .time {
-  font-size: 14px;
-  color: #6b7280;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.timeline-item ul {
-  margin: 0;
-  padding-left: 20px;
-  color: #374151;
-}
-
-.footer {
-  background: var(--alt);
-  padding: 20px;
-  text-align: center;
-  font-size: 14px;
-  color: #6b7280;
-}
