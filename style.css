@@ -1,4 +1,10 @@
+---
 
+/*
+File: styles.css
+
+Copy this exactly into styles.css
+*/
 :root{
   --bg: #f8fafc;
   --card: #ffffff;
@@ -97,7 +103,7 @@ body{
   .mobile-nav{display:block}
 }
 
-
+/* subtle entrance animations */
 .card, .timeline-item, .profile-card{opacity:0;transform:translateY(12px);animation:entrance .6s forwards}
 .card:nth-child(1){animation-delay:.06s}
 .card:nth-child(2){animation-delay:.12s}
@@ -113,4 +119,5 @@ body{
 
 ---
 
-/*
+
+
