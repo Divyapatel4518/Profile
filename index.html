@@ -18,32 +18,26 @@ Place this file at the root of your project and make sure styles.css and script.
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Main stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">Divya <span class="accent">Patel</span></div>
+  <header class="header hero-header">
+    <div class="container header-flex">
+      <div class="logo">Divya Patel</div>
       <nav class="nav">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#certificates">Certificates</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </nav>
-
-      <div class="controls">
-        <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
-        <button id="menu-toggle" class="mobile-only" aria-label="Open menu">☰</button>
-      </div>
     </div>
-
-    <div id="mobile-nav" class="mobile-nav">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
+    <div class="hero-content">
+      <h1 class="hero-title">Hi, I'm <span>Divya Patel</span></h1>
+      <p class="hero-subtitle">Business Analyst • IT Graduate • Data‑Driven Thinker</p>
+      <a href="#projects" class="hero-btn">View My Work</a>
     </div>
   </header>
 
@@ -86,7 +80,27 @@ Place this file at the root of your project and make sure styles.css and script.
     </section>
 
     <!-- Projects with modal popups -->
-    <section id="projects" class="section container">
+    <!-- Education -->
+  <section id="education" class="section reveal education">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Master of Information Technology — QUT</h3>
+          <span class="time">2023 – 2024</span>
+          <p>Major in Business Analysis. Industry‑based projects, strategic analysis work and data analytics.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Bachelor of Computer Applications — India</h3>
+          <span class="time">2013 – 2016</span>
+          <p>Strong foundation in programming, databases and software development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section container">
       <h2>Projects</h2>
       <div class="grid projects-grid" aria-live="polite">
         <!-- Project card template -->
@@ -125,6 +139,23 @@ Place this file at the root of your project and make sure styles.css and script.
             <a class="link" href="#" target="_blank">Notebook</a>
           </div>
         </article>
+      </div>
+    </section>
+
+    <!-- Certificates -->
+    <section id="certificates" class="section container">
+      <h2>Certificates</h2>
+      <div class="grid">
+        <div class="card">Business Analysis Foundations — LinkedIn Learning</div>
+        <div class="card">Power BI for Beginners — Microsoft</div>
+        <div class="card">Microsoft Azure Fundamentals — Skillsoft</div>
+        <div class="card">Deloitte Data Analytics Job Simulation — Forage</div>
+        <div class="card">Deloitte Technology Job Simulation — Forage</div>
+        <div class="card">Deloitte Cyber Security Job Simulation — Forage</div>
+        <div class="card">NSW Digital Government Job Simulation — Forage</div>
+        <div class="card">Relevance AI — RAG & LLM Development Training</div>
+        <div class="card">SQL & Database Management Essentials</div>
+        <div class="card">HTML, CSS & JavaScript Essentials</div>
       </div>
     </section>
 
@@ -190,5 +221,127 @@ Place this file at the root of your project and make sure styles.css and script.
 </body>
 </html>
 
+
+
+---
+
+/*
+File: styles.css
+
+Copy this exactly into styles.css
+*/
+:root{
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --primary: #6366f1;
+  --accent: #06b6d4;
+  --text: #0f172a;
+  --muted: #64748b;
+  --glass: rgba(255,255,255,0.6);
+}
+
+/* Dark theme vars */
+:root.dark{
+  --bg: #0b1220;
+  --card: rgba(10,14,22,0.7);
+  --primary: #7c3aed;
+  --accent: #06b6d4;
+  --text: #e6eef8;
+  --muted: #9aa7b5;
+  --glass: rgba(255,255,255,0.03);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: 'Poppins', sans-serif;
+  background:linear-gradient(180deg,var(--bg),#ffffff);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+.container{max-width:1100px;margin:0 auto;padding:28px}
+
+/* Header */
+.site-header{position:sticky;top:12px;background:var(--card);margin:12px 0;border-radius:14px;box-shadow:0 10px 35px rgba(2,6,23,0.08);}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
+.brand{font-weight:700;font-size:20px}
+.brand .accent{color:var(--primary)}
+.nav a{margin-left:18px;color:var(--text);text-decoration:none;font-weight:500}
+.nav a:hover{color:var(--primary)}
+.controls{display:flex;align-items:center;gap:10px}
+#theme-toggle{background:transparent;border:0;font-size:18px;cursor:pointer}
+.mobile-only{display:none}
+
+/* Mobile nav */
+.mobile-nav{display:none;padding:12px 24px;border-top:1px solid rgba(0,0,0,0.04)}
+.mobile-nav a{display:block;padding:10px 0;color:var(--text);text-decoration:none}
+
+/* Hero */
+.hero{padding:48px 0}
+.hero-container{display:flex;gap:36px;align-items:center}
+.hero-left{flex:1}
+.title{font-size:36px;margin-bottom:10px}
+.subtitle{color:var(--muted);margin-bottom:12px}
+.type-wrap{font-weight:600;color:var(--primary);margin-top:8px}
+.cursor{opacity:1;animation:blink 1s infinite}
+@keyframes blink{0%,50%{opacity:1}51%,100%{opacity:0}}
+
+.profile-card{background:linear-gradient(135deg,var(--glass),rgba(255,255,255,0.02));padding:18px;border-radius:14px;display:flex;align-items:center;gap:14px;box-shadow:0 12px 30px rgba(2,6,23,0.06)}
+.profile-img{width:100px;height:100px;border-radius:50%;object-fit:cover}
+.profile-info h3{margin:0}
+.profile-info .role{color:var(--muted);font-size:13px}
+.socials a{margin-right:10px;font-size:13px;color:var(--primary);text-decoration:none}
+
+/* Buttons */
+.btn{display:inline-block;padding:10px 16px;border-radius:12px;text-decoration:none;font-weight:600}
+.btn.primary{background:var(--primary);color:white}
+.btn.ghost{background:transparent;border:2px solid rgba(0,0,0,0.06)}
+.btn.outline{background:transparent;border:1px solid rgba(0,0,0,0.08);padding:8px 12px;border-radius:10px}
+.link{color:var(--primary);font-weight:600;text-decoration:none}
+
+/* Grid & Cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 10px 30px rgba(2,6,23,0.05);transition:transform .25s ease,box-shadow .25s ease}
+.card:hover{transform:translateY(-8px)}
+.muted{color:var(--muted);font-size:14px}
+.card-actions{display:flex;align-items:center;gap:12px;margin-top:12px}
+
+/* Timeline */
+.timeline-item{background:var(--card);padding:16px;border-radius:12px;margin-bottom:12px;box-shadow:0 8px 20px rgba(2,6,23,0.04)}
+.time{color:var(--muted);font-size:13px}
+
+/* Footer */
+.site-footer{padding:22px;text-align:center;color:var(--muted)}
+
+/* Modal */
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:2000}
+.modal[aria-hidden="false"]{display:flex}
+.modal-backdrop{position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,6,23,0.5),rgba(2,6,23,0.6));backdrop-filter:blur(4px)}
+.modal-panel{position:relative;background:var(--card);border-radius:14px;padding:20px;max-width:760px;width:94%;z-index:2;box-shadow:0 20px 60px rgba(2,6,23,0.5)}
+.modal-close{position:absolute;right:12px;top:12px;border:0;background:transparent;font-size:18px;cursor:pointer}
+
+/* small screens */
+@media (max-width:800px){
+  .hero-container{flex-direction:column-reverse}
+  .nav{display:none}
+  .mobile-only{display:inline-block}
+  .mobile-nav{display:block}
+}
+
+/* subtle entrance animations */
+.card, .timeline-item, .profile-card{opacity:0;transform:translateY(12px);animation:entrance .6s forwards}
+.card:nth-child(1){animation-delay:.06s}
+.card:nth-child(2){animation-delay:.12s}
+.card:nth-child(3){animation-delay:.18s}
+.card:nth-child(4){animation-delay:.24s}
+.profile-card{animation-delay:.04s}
+@keyframes entrance{to{opacity:1;transform:none}}
+
+/* Accessible focus state */
+.project-card:focus{outline:3px solid rgba(99,102,241,0.18);transform:translateY(-6px)}
+
+
+
+---
 
 
