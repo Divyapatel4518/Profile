@@ -1,135 +1,194 @@
+# Divya Portfolio — Split Files (index.html, styles.css, script.js)
+
+---
+
+<!--
+File: index.html
+Place this file at the root of your project and make sure styles.css and script.js are in the same folder (or update paths).
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Divya Patel | Professional Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <title>Divya Patel — Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container header-flex">
-      <div class="logo">Divya Patel</div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Divya <span class="accent">Patel</span></div>
       <nav class="nav">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
-        <a href="#certificates">Certificates</a>
         <a href="#contact">Contact</a>
       </nav>
+
+      <div class="controls">
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <button id="menu-toggle" class="mobile-only" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+
+    <div id="mobile-nav" class="mobile-nav">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
     </div>
   </header>
 
-  <!-- About -->
-  <section id="about" class="section reveal about">
-    <div class="container about-flex">
-      <img src="your-photo.jpg" alt="Divya Patel" class="profile-photo">
-      <div>
-        <h2>About Me</h2>
-        <p>
-          I am a Master of Information Technology graduate from QUT, specializing in Business Analysis. 
-          My focus is on building data‑driven solutions and dashboards that empower organizations to make smarter decisions. 
-          With experience in AI tools, blockchain research, and Power BI dashboards, I bring both technical expertise and analytical insight.
-        </p>
-      </div>
-    </div>
-  </section>
+  <!-- Hero -->
+  <main>
+    <section class="hero" id="about">
+      <div class="hero-container container">
+        <div class="hero-left">
+          <h1 class="title">Hi, I'm <strong>Divya Patel</strong></h1>
+          <p class="subtitle">Master of IT (Business Analysis) • Data & BI • AI experiments • Blockchain research</p>
 
-  <!-- Projects -->
-  <section id="projects" class="section reveal projects">
-    <div class="container">
+          <p class="type-wrap">I'm a <span id="typing"></span><span class="cursor">|</span></p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="resume.pdf" target="_blank">Download Resume</a>
+            <a class="btn ghost" href="#projects">View Projects</a>
+          </div>
+
+          <div class="meta">
+            <span>Brisbane, Australia</span>
+            <span>•</span>
+            <a href="mailto:divya.patel4518@gmail.com">divya.patel4518@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="profile-card">
+            <img src="your-photo.jpg" alt="Divya Patel" class="profile-img">
+            <div class="profile-info">
+              <h3>Divya Patel</h3>
+              <p class="role">Business Analyst | Data & BI</p>
+              <div class="socials">
+                <a href="https://github.com/" target="_blank" aria-label="GitHub">GitHub</a>
+                <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects with modal popups -->
+    <section id="projects" class="section container">
       <h2>Projects</h2>
-      <div class="grid">
-        <div class="card"><h3>LLM Tool for Strategic Foresight</h3><p>Developed a RAG tool to extract PESTEL insights for Queensland Government.</p></div>
-        <div class="card"><h3>Blockchain in Education</h3><p>Researched credential verification using blockchain, identifying adoption strategies and barriers.</p></div>
-        <div class="card"><h3>Hospital Performance Dashboard</h3><p>Created a Power BI dashboard analyzing KPIs like wait times, readmission, and satisfaction.</p></div>
-        <div class="card"><h3>Housing Market Dataset</h3><p>Integrated ABS, RBA, and real estate data to support affordability analysis and forecasting.</p></div>
+      <div class="grid projects-grid" aria-live="polite">
+        <!-- Project card template -->
+        <article class="card project-card" data-project-id="p1" tabindex="0">
+          <h3>LLM Tool for Strategic Foresight</h3>
+          <p class="muted">RAG + PESTEL insights for Queensland Government</p>
+          <div class="card-actions">
+            <button class="btn outline open-modal" data-project="p1">Details</button>
+            <a class="link" href="#" target="_blank">Code</a>
+          </div>
+        </article>
+
+        <article class="card project-card" data-project-id="p2" tabindex="0">
+          <h3>Blockchain in Education</h3>
+          <p class="muted">Students Skills Ledger — credential verification</p>
+          <div class="card-actions">
+            <button class="btn outline open-modal" data-project="p2">Details</button>
+            <a class="link" href="#" target="_blank">Paper</a>
+          </div>
+        </article>
+
+        <article class="card project-card" data-project-id="p3" tabindex="0">
+          <h3>Hospital Performance Dashboard</h3>
+          <p class="muted">Power BI KPIs monitoring and insights</p>
+          <div class="card-actions">
+            <button class="btn outline open-modal" data-project="p3">Details</button>
+            <a class="link" href="#" target="_blank">Demo</a>
+          </div>
+        </article>
+
+        <article class="card project-card" data-project-id="p4" tabindex="0">
+          <h3>Housing Market Dataset</h3>
+          <p class="muted">ABS + RBA + REA correlation & forecasting</p>
+          <div class="card-actions">
+            <button class="btn outline open-modal" data-project="p4">Details</button>
+            <a class="link" href="#" target="_blank">Notebook</a>
+          </div>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Skills -->
-  <section id="skills" class="section reveal skills">
-    <div class="container">
+    <!-- Skills -->
+    <section id="skills" class="section container">
       <h2>Skills</h2>
-      <ul class="skills-list">
-        <li>Business Analysis (BPMN, UML, Agile)</li>
-        <li>Data Visualization (Power BI, Tableau, Excel)</li>
-        <li>Programming (PHP, Java, Python, HTML/CSS)</li>
-        <li>Tools (Jira, Zendesk, Relevance AI)</li>
-      </ul>
-    </div>
-  </section>
+      <div class="grid">
+        <div class="card">
+          <h3>Analysis & Frameworks</h3>
+          <p class="muted">BPMN • UML • Agile • Requirements</p>
+        </div>
+        <div class="card">
+          <h3>Data & Visualization</h3>
+          <p class="muted">Power BI • Tableau • Excel • Python (pandas)</p>
+        </div>
+        <div class="card">
+          <h3>Development</h3>
+          <p class="muted">HTML/CSS • Java • PHP • SQL</p>
+        </div>
+      </div>
+    </section>
 
-  <!-- Experience -->
-  <section id="experience" class="section reveal experience">
-    <div class="container">
+    <!-- Experience -->
+    <section id="experience" class="section container">
       <h2>Experience</h2>
       <div class="timeline">
         <div class="timeline-item">
-          <h3>Customer Service Supervisor — Coles Supermarket</h3>
+          <h3>Customer Service Supervisor — Coles</h3>
           <span class="time">Mar 2023 – Present</span>
-          <p>Resolved customer issues, trained new staff, and improved workflows during night shifts.</p>
+          <p>Frontline leadership, process improvements, and training.</p>
         </div>
         <div class="timeline-item">
           <h3>PHP Developer — Icon Technology, India</h3>
           <span class="time">Jul 2017 – Dec 2018</span>
-          <p>Developed responsive websites, enhanced functionality, and collaborated with developers to meet deadlines.</p>
+          <p>Built responsive websites and feature enhancements for clients.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Certificates -->
-  <section id="certificates" class="section reveal certificates">
-    <div class="container">
-      <h2>Certificates</h2>
-      <div class="cert-grid">
-        <div class="cert-card">Business Analysis Foundations</div>
-        <div class="cert-card">Power BI for Beginners</div>
-        <div class="cert-card">Microsoft Azure Fundamentals</div>
-        <div class="cert-card">Deloitte Data & Tech Virtual Experience</div>
-        <div class="cert-card">NSW Digital Virtual Experience</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section reveal contact">
-    <div class="container">
+    <!-- Contact -->
+    <section id="contact" class="section container">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:divya.patel4518@gmail.com">divya.patel4518@gmail.com</a></p>
       <p>Phone: <a href="tel:+61431831976">+61 431 831 976</a></p>
-      <p>Location: Brisbane, QLD, Australia</p>
-      <p><a href="resume.pdf" target="_blank" class="btn">📄 Download My Resume</a></p>
-      <p><a href="https://github.com/" target="_blank">GitHub</a> | <a href="https://linkedin.com/" target="_blank">LinkedIn</a></p>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>© <span id="year"></span> Divya Patel • Professional Portfolio</p>
-    </div>
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Divya Patel — All rights reserved</div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    const reveals = document.querySelectorAll(".reveal");
-    window.addEventListener("scroll", () => {
-      for (let i = 0; i < reveals.length; i++) {
-        const windowHeight = window.innerHeight;
-        const elementTop = reveals[i].getBoundingClientRect().top;
-        const elementVisible = 150;
-        if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add("active");
-        }
-      }
-    });
-  </script>
+  <!-- Modal wrapper (single element used for any project) -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-label="Project details">
+      <button class="modal-close" aria-label="Close modal">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
 </body>
 </html>
+
+
 
