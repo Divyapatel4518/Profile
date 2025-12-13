@@ -5,25 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Divya Patel — Portfolio</title>
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
+    <!-- Custom CSS -->
     <style>
       .cursor-blink {
         animation: blink 1s step-end infinite;
       }
+
       @keyframes blink {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
       }
     </style>
-    <script type="module" crossorigin src="/Profile/assets/index-_CjJqwnV.js"></script>
-    <link rel="stylesheet" crossorigin href="/Profile/assets/index-DqRwlUbU.css">
-  </head>
-  <body class="bg-grey-light text-grey-dark antialiased">
-    <div id="root"></div>
-    <!-- No script tags here — Vite will inject JS automatically -->
 
+    <!-- Import Map (for React without Vite build) -->
+
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://aistudiocdn.com/react@^19.2.1",
+          "react-dom": "https://aistudiocdn.com/react-dom@^19.2.1",
+          "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+          "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.25"
+        }
+      }
+    </script>
+    <script type="module" crossorigin src="/Profile/assets/index-D29hw0Nx.js"></script>
+    <link rel="stylesheet" crossorigin href="/Profile/assets/index-C6G_3qQV.css">
+  </head>
+
+  <body class="bg-gray-100 text-gray-900 antialiased">
+    <div id="root"></div>
+
+    <!-- Entry file -->
   </body>
 </html>
